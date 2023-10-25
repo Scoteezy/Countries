@@ -1,0 +1,41 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+:root{
+  /* Typography */
+  --family: 'Nunito Sans', sans-serif;
+  --fs-sm:14px;
+  --sf-md:16px;
+  --fw-ligth: 300;
+  --fw-normal:600;
+  --fw-bold:800;
+
+  /* Other */
+  --radii: 0.5rem
+}
+
+
+body[data-theme='dark']{
+  --colors-text: hsl(0, 0%, 100%);
+  --color-bg:hsl(207, 26%, 17%);
+  --colors-ui-base:hsl(209, 23%, 22%);
+  --shadow: rgba(245,245,245,0.2) 0 0 8px;
+}
+body[data-theme='light']{
+  --colors-text:hsl(200, 15%, 8%);
+  --color-bg:hsl(0, 0%, 98%);
+  --colors-ui-base:hsl(0, 0%, 100%);
+
+
+  --shadow: rgba(149,157,165, 0.2) 0px 8px 24px;
+}
+body{
+  margin: 0;
+  font-family: var(--family);
+  color:var(--colors-text);
+  font-weight: var(--fw-light);
+  background-color: var(--color-bg);
+}
