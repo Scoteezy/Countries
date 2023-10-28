@@ -8,8 +8,7 @@ import { ALL_COUTNRIES } from '../config'
 
 const HomePage = ({countries,setCountries}) => {
     const navigate = useNavigate();
-    const [filteredCountries, setFilteredCountries] = useState([]);
-
+    const [filteredCountries, setFilteredCountries] = useState(countries);
     const handleSearch = (search, region)=>{ 
         let data = [...countries];
 
@@ -30,9 +29,15 @@ const HomePage = ({countries,setCountries}) => {
                 ({data})=> setCountries(data)
             )
         }
-     
+
+    //eslint-disable-next-line
     },[]);
 
+    useEffect(()=>{
+      handleSearch();
+      
+    //eslint-disable-next-line
+    },[countries])
   return (
     <>
     <Controls onSearch={handleSearch}/>
